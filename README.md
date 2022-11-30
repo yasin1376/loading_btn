@@ -23,7 +23,7 @@ parameters with a few extra functionalities.
 
 ## Demo
 
-<img src='https://github.com/yasin1376/loading_btn/blob/master/demo/loading_btn.gif' height='480px' />
+<img src='https://github.com/yasin1376/loading_btn/blob/master/demo/loading_btn.gif?raw=true' height='480px' />
 
 ## Usage
 
