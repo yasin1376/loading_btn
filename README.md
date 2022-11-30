@@ -113,51 +113,37 @@ stopLoading();
 ### Loading Button with custom loading
 
 ```dart
-LoadingBtn
-(
-height: 50
-,
-borderRadius: 8
-,
-animate: true
-,
-color: Colors.deepOrange,width: MediaQuery.of(context).
-size.width * 0.45
-,
-loader: Container
-(
-padding: const EdgeInsets.all(10
-)
-,
-child: const Center(child: SpinKitDoubleBounce
-(
-color: Colors.white,)
-,
-)
-,
-)
-,
-child: const Text("
-Login")
-,
-onTap: (
-startLoading, stopLoading, btnState) async {
-if (btnState == ButtonState.idle) {
-startLoading();
-// call your network api
-await Future.delayed(const Duration(seconds: 5));
-stopLoading();
-}
-},
-)
-,
+LoadingBtn(
+    height: 50,
+    borderRadius: 8,
+    animate: true,
+    color: Colors.deepOrange,
+    width: MediaQuery.of(context).size.width * 0.45,
+    loader: Container(
+      padding: const EdgeInsets.all(10),
+      child: const Center(
+          child: SpinKitDoubleBounce(
+            color: Colors.white,
+          ),
+      ),
+    ),
+    child: const Text("Login"),
+    onTap: (startLoading, stopLoading, btnState) async {
+        if (btnState == ButtonState.idle) {
+            startLoading();
+            // call your network api
+            await Future.delayed(const Duration(seconds: 5));
+            stopLoading();
+        }
+    },
+),
 ```
 
 ## Properties
 
 ***
 
-    * roundLoadingShape(Default true) : When set to true, it uses borderRadius to creates a round buttonwhile in Busy/Loading state
+    * ** roundLoadingShape(Default true) ** : When set to true, it uses borderRadius to creates a round buttonwhile in Busy/Loading state
     * width: Width of the button when in Idle state
     * minWidth: Width of the button when in Busy/Loading state. Default value is equal to height in order to create a completely round loading button 
     * borderRadius: Border Radius of the button
