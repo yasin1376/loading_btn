@@ -12,3 +12,11 @@ and the Flutter guide for
 -->
 
 Create animated loading button using loading_button package with lots of properties.
+
+## Getting started
+
+Loading Btn helps you create beautiful loading animation in your buttons with customized loader.
+
+## Demo
+
+![Loading Btn GIF](demo/loading_btn.gif)
