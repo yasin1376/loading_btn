@@ -27,7 +27,7 @@ parameters with a few extra functionalities.
 
 ## Usage
 
-# Loading Button with CircularProgress widget
+### Loading Button with CircularProgress widget
 
 ```dart
 LoadingBtn(
@@ -48,6 +48,7 @@ LoadingBtn(
     onTap: (startLoading, stopLoading, btnState) async {
         if (btnState == ButtonState.idle) {
             startLoading();
+            // call your network api
             await Future.delayed(const Duration(seconds: 5));
             stopLoading();
         }
@@ -55,3 +56,25 @@ LoadingBtn(
 ),
 ```
 
+### Loading Button with custom Text
+
+```dart
+LoadingBtn(
+    height: 50,
+    borderRadius: 8,
+    roundLoadingShape: false,
+    color: Colors.blueAccent,
+    width: MediaQuery.of(context).size.width * 0.45,
+    minWidth: MediaQuery.of(context).size.width * 0.30,
+    loader: const Text("Loading..."),
+    child: const Text("Login"),
+    onTap: (startLoading, stopLoading, btnState) async {
+        if (btnState == ButtonState.idle) {
+            startLoading();
+            // call your network api
+            await Future.delayed(const Duration(seconds: 5));
+            stopLoading();
+        }
+    },
+),
+```

@@ -33,6 +33,7 @@ class HomePage extends StatelessWidget {
               onTap: (startLoading, stopLoading, btnState) async {
                 if (btnState == ButtonState.idle) {
                   startLoading();
+                  // call your network api
                   await Future.delayed(const Duration(seconds: 5));
                   stopLoading();
                 }
@@ -52,6 +53,7 @@ class HomePage extends StatelessWidget {
               onTap: (startLoading, stopLoading, btnState) async {
                 if (btnState == ButtonState.idle) {
                   startLoading();
+                  // call your network api
                   await Future.delayed(const Duration(seconds: 5));
                   stopLoading();
                 }
@@ -77,6 +79,7 @@ class HomePage extends StatelessWidget {
               onTap: (startLoading, stopLoading, btnState) async {
                 if (btnState == ButtonState.idle) {
                   startLoading();
+                  // call your network api
                   await Future.delayed(const Duration(seconds: 5));
                   stopLoading();
                 }
