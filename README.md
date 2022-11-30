@@ -19,4 +19,4 @@ Loading Btn helps you create beautiful loading animation in your buttons with cu
 
 ## Demo
 
-![Loading Btn GIF](demo/loading_btn.gif)
+<img src='demo/loading_btn.gif' height='320px' />
