@@ -1,6 +1,6 @@
 name: loading_btn
 description: An animated loading button package that allows you to create beautiful loadding button with lots of customized properties.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/yasin1376/loading_btn
 
 environment:
