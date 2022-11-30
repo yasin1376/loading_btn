@@ -110,11 +110,15 @@ LoadingBtn(
 
 ## Properties
 
-* **roundLoadingShape(Default true)** : When set to true, it uses borderRadius to creates a round buttonwhile in Busy/Loading state
-* width: Width of the button when in Idle state
-* minWidth: Width of the button when in Busy/Loading state. Default value is equal to height in order to create a completely round loading button 
-* borderRadius: Border Radius of the button
-* borderSide : BorderSide in order to give border color and width to the button 
-* child: Contents of button when in Idle state 
-* loader: Contents of button when in Busy/Loading state 
-* onTap: (startLoading, stopLoading, btnState) : Function that is called when you click on the button
+* **animate(Default false)** : It uses width to animate while click on button
+* **roundLoadingShape(Default true)** : It uses borderRadius to creates a round button while in Busy/Loading state
+* **width** : Width of the button when in Idle state
+* **minWidth** : Width of the button when in Busy/Loading state. Default value is equal to height in order to create a completely round loading button 
+* **borderRadius** : Border Radius of the button
+* **borderSide** : BorderSide in order to give border color and width to the button 
+* **child** : Contents of button when in Idle state 
+* **loader** : Contents of button when in Busy/Loading state 
+* **onTap** : (startLoading, stopLoading, btnState) : Function that is called when you click on the button
+* **duration** : Duration of the animation 
+* **curve** : Curve of animation
+* **reverseCurve** : Curve of reverse animation
