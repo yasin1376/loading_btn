@@ -11,12 +11,47 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-Create animated loading button using loading_button package with lots of properties.
+## Loading Btn
+
+Create animated loading button using loading_btn package with lots of properties.
 
 ## Getting started
 
-Loading Btn helps you create beautiful loading animation in your buttons with customized loader.
+Loading Btn package helps you create beautiful loading animation in your buttons with customized
+loader. Loading Btn is basically an ElevatedButton widget that means you can use the usual
+parameters with a few extra functionalities.
 
 ## Demo
 
-<img src='demo/loading_btn.gif' height='320px' />
+<img src='demo/loading_btn.gif' height='480px' />
+
+## Usage
+
+# Loading Button with CircularProgress widget
+
+```dart
+LoadingBtn(
+    height: 50,
+    borderRadius: 8,
+    animate: true,
+    color: Colors.green,
+    width: MediaQuery.of(context).size.width * 0.45,
+    loader: Container(
+        padding: const EdgeInsets.all(10),
+        width: 40,
+        height: 40,
+        child: const CircularProgressIndicator(
+          valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+        ),
+    ),
+    child: const Text("Login"),
+    onTap: (startLoading, stopLoading, btnState) async {
+        if (btnState == ButtonState.idle) {
+            startLoading();
+            await Future.delayed(const Duration(seconds: 5));
+            stopLoading();
+        }
+    },
+),
+```
+
